@@ -63,17 +63,7 @@
       </a>
       <h1><a href="http://inexplicablecuriosity.com">Inexplicable Curiosity</a></h1>
 
-<p>Not Easily Justified</p>      <nav>
-        <ul class="list">
-
-
-            <li><a target="_blank" href="http://getpelican.com/" >Pelican</a></li>
-            <li><a target="_blank" href="http://python.org/" >Python.org</a></li>
-            <li><a target="_blank" href="http://jinja.pocoo.org/" >Jinja2</a></li>
-            <li><a target="_blank" href="#" >You can modify those links in your config file</a></li>
-        </ul>
-      </nav>
-
+<p>Not Easily Justified</p>
       <ul class="social">
       </ul>
     </div>
@@ -96,8 +86,22 @@
 
 
   <div>
-    <p>This is a test. Test 6</p>
-<p><img alt="payoff_minutes" src="http://inexplicablecuriosity.com/images/superbowlsquares_payoff_minutes.svg"></p>
+    <p>Many people love to gamble on sports. A popular way of betting on the Super Bowl is called <a href="https://www.si.com/nfl/2020/01/25/super-bowl-squares-rules-how-does-it-work">Super Bowl Squares</a>. The way it works is simple: 
+1. There are 100 squares in a 10x10 grid. Participants purchase one or more squares in the grip. 
+2. The numbers 0-9 are assigned to each row (Team A) and column (Team B) of the grid.
+3. At the end of every "time unit" the ones digit of each team's score determines the winner. So if the score is 13-17, 13-7, or 3-7, the (3,7) square pays out.</p>
+<p>Commonly there is a payout either at the end of the game or at the end of each quarter. Both of these cases have been analyzed by others (e.g. <a href="https://fivethirtyeight.com/features/how-much-money-youre-going-to-win-playing-super-bowl-squares/">538</a> and the <a href="https://harvardsportsanalysis.wordpress.com/2013/01/30/the-optimal-strategy-for-playing-squares/">Harvard Sports Analysis Collective</a>). However, at this year's Super Bowl I was talking to someone who was in a Squares pool that paid out based on the score at the end of <strong>every minute</strong>!</p>
+<p>This is unusual, or at least a newer development, and I couldn't find any analysis of it online.</p>
+<p>I calculated the payout on a $1 bet (assuming equal payout per time period) for each of minute, quarter, and final score based on the last 20 Super Bowls (XXXV-LIV). I treated teams symmetrically, so, for example, the payouts for 3-7 and 7-3 were averaged.</p>
+<p>As you can see, switching from Quarters to Minutes increases the skew towards the best square 0-0. More than a fifth of minutes in the last 20 Super Bowls had scores with zeroes as the trailing digits!</p>
+<p><img alt="payoff_minutes" src="http://inexplicablecuriosity.com/images/superbowlsquares_payouts_minutes.svg">
+<img alt="payoff_quarters" src="http://inexplicablecuriosity.com/images/superbowlsquares_payouts_quarters.svg">
+<img alt="payoff_final" src="http://inexplicablecuriosity.com/images/superbowlsquares_payouts_final.svg"></p>
+<h3>Notes</h3>
+<ol>
+<li>Scoring data from https://www.pro-football-reference.com/</li>
+<li>Code available upon request</li>
+</ol>
   </div>
   <div class="tag-cloud">
     <p>
